@@ -3,6 +3,8 @@ package main
 import (
 	"context"
 	"os"
+
+	"github.com/Rod-Way/game/internal/application"
 )
 
 func main() {

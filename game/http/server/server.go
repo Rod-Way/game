@@ -5,6 +5,10 @@ import (
 	"fmt"
 	"net/http"
 	"time"
+
+	"go.uber.org/zap"
+	"github.com/Rod-Way/game/http/server/handler"
+	"github.com/Rod-Way/game/internal/service"
 )
 
 // маршрутизация

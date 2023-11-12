@@ -4,6 +4,8 @@ import (
 	"context"
 	"encoding/json"
 	"net/http"
+
+	"github.com/Rod-Way/game/internal/service"
 )
 
 // создадим новый тип для добавления middleware к обработчикам

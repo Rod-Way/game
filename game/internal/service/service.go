@@ -3,6 +3,8 @@ package service
 import (
 	"math/rand"
 	"time"
+
+	"github.com/Rod-Way/game/pkg/life"
 )
 
 // для хранения состояния
@@ -14,17 +16,13 @@ type LifeService struct {
 func New(height, width int) (*LifeService, error) {
 	rand.NewSource(time.Now().UTC().UnixNano())
 
-	currentWorld, err := life.NewWorld(height, width)
-	if err != nil {
-		return nil, err
-	}
+	currentWorld:= life.NewWorld(height, width)
+	
 	// для упрощения примера хаотично заполним
 	currentWorld.RandInit(40)
 
-	newWorld, err := life.NewWorld(height, width)
-	if err != nil {
-		return nil, err
-	}
+	newWorld := life.NewWorld(height, width)
+	
 
 	ls := LifeService{
 		currentWorld: currentWorld,
